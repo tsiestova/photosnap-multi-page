@@ -1,0 +1,33 @@
+@import "../abstracts/functions";
+
+.header {
+  padding: 28px 0 24px;
+
+  .layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  @include breakpoint(tablet) {
+
+  }
+}
+
+.header-burger-menu {
+  position: relative;
+  background: transparent;
+  outline: none;
+  border: none;
+
+  &:before {
+    content: '';
+    width: 20px;
+    height: 6px;
+    display: inline-block;
+    background-image: url(./assets/burger.png);
+    background-size: contain;
+    background-repeat: repeat;
+  }
+}
+

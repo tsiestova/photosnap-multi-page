@@ -1,0 +1,48 @@
+@import "abstracts/index";
+@import "layout";
+
+@import "./components/header.scss";
+@import "./components/buttons.scss";
+
+@import "./components/underheader.scss";
+@import "./components/beautiful-stories.scss";
+@import "./components/gallery.scss";
+@import "./components/advantages.scss";
+
+
+body {
+  //background: red;
+}
+
+
+.section {
+
+  .text-wrap-box {
+    padding: 72px 0;
+  }
+
+  .section-title {
+    margin-bottom: 16px;
+  }
+
+  .section-content {
+    margin-bottom: 23px;
+  }
+
+  &.photo-line {
+    .image-wrap-box {
+      position: relative;
+
+      &:after {
+        content: '';
+        width: 128px;
+        height: 6px;
+        left: 33px;
+        bottom: -6px;
+        position: absolute;
+        bottom: 0;
+        background: linear-gradient(27deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+      }
+    }
+  }
+}

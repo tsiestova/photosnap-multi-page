@@ -1,0 +1,64 @@
+@use "functions" as media;
+
+:root {
+  --main-font: 'DM Sans', sans-serif;
+  --text-color-white: #fff;
+  --text-color-light: rgba( 255, 255, 255, 0.6 );
+  --text-color-black: #000;
+  --text-color-black-opacity:  rgba( 0, 0, 0, 0.6 );
+}
+
+.heading-l {
+  font-family: var(--main-font);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 3.333px;
+  text-transform: uppercase;
+
+  @include media.breakpoint(tablet) {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px; /* 120% */
+    letter-spacing: 4.167px;
+  }
+}
+
+.heading-m {
+  font-family: var(--main-font);
+
+}
+
+.heading-s {
+  font-family: var(--main-font);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25px; /* 138.889% */
+}
+
+.body-l {
+  font-family: var(--main-font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px; /* 166.667% */
+
+  @include media.breakpoint(tablet) {
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 25px; /* 166.667% */
+  }
+}
+
+.body-m {
+  font-family: var(--main-font);
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.body-s {
+  font-family: var(--main-font);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25px; /* 166.667% */
+}

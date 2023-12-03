@@ -1,0 +1,11 @@
+@import "abstracts/var";
+
+body {
+  font-family: var(--main-font);
+  //background-color: var(--bg-primary);
+
+}
+
+.layout {
+  padding: 0 24px;
+}

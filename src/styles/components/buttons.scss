@@ -1,0 +1,38 @@
+.link-arrow {
+  font-family: var(--main-font);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2px;
+  position: relative;
+
+  &.light {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--text-color-white);
+
+    &:after {
+      content: '';
+      display: inline-block;
+      background-image: url(./assets/arrow-white.svg);
+      width: 42px;
+      height: 12px;
+    }
+  }
+
+  &.dark {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    color: var(--text-color-black);
+
+    &:after {
+      content: '';
+      display: inline-block;
+      background-image: url(./assets/arrow-black.svg);
+      width: 42px;
+      height: 12px;
+    }
+  }
+}
