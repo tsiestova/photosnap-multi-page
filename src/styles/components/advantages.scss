@@ -16,7 +16,7 @@
 }
 
 .advantages-container__item {
-  padding-top: 56px;
+  //padding-top: 56px;
 
   .advantages-container__inner {
     max-width: 310px;
@@ -27,7 +27,7 @@
       content: '';
       width: 72px;
       height: 72px;
-      margin-bottom: 48px;
+      //margin-bottom: 48px;
     }
   }
   &.item-responsive {
@@ -62,5 +62,12 @@
 }
 
 .advantages-container__wrap {
-  padding-top: 24px;
+  //padding-top: 24px;
+}
+
+.advantages-container__list {
+  display: flex;
+  flex-direction: column;
+  gap: 56px;
+  padding: 80px 0 80px;
 }

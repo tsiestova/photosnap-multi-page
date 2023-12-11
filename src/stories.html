@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<header class="header">
+    <div class="layout">
+        <a href="/" class="logo-black">
+            <img src="./assets/logo-black.svg" alt="">
+        </a>
+        <nav>
+            <ul class="header__nav-list nav-list">
+                <li class="header__nav-item nav-item">STORIES</li>
+                <li class="header__nav-item nav-item">FEATURES</li>
+                <li class="header__nav-item nav-item">PRICING</li>
+
+            </ul>
+        </nav>
+        <button type="button" class="header-burger-menu">
+        </button>
+    </div>
+</header>
+<main>
+    <section class="section section__under-header photo-line section-dark">
+        <div class="image-wrap-box">
+            <picture>
+                <source
+                        media="(min-width: 900px)"
+                        srcset="./assets/home/desktop/create-and-share.jpg"
+                        type="image/jpeg"
+                />
+                <source
+                        media="(min-width: 600px)"
+                        srcset="./assets/home/tablet/create-and-share.jpg"
+                        type="image/jpeg"
+                />
+                <source
+                        srcset="./assets/home/mobile/create-and-share.jpg"
+                        type="image/jpeg"
+                />
+                <img
+                        src="./assets/home/mobile/create-and-share.jpg"
+                        type="image/jpeg"
+                />
+            </picture>
+        </div>
+        <div class="text-wrap-box">
+            <div class="layout">
+                <h1 class="section__under-header_content_title section-title heading-l">Create and share your photo stories. </h1>
+                <p class="section__under-header_content section-content body-l">Photosnap is a platform for photographers and visual storytellers. We make it easy to share photos, tell stories and connect with others.</p>
+                <a href="#" class="link-arrow light">GET AN INVITE</a>
+            </div>
+        </div>
+    </section>
+</main>
+</body>
+</html>

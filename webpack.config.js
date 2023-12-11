@@ -9,6 +9,16 @@ const CopyPlugin = require("copy-webpack-plugin");
 
 const stylesHandler = "style-loader";
 
+let htmlPageNames = ['index', 'stories', 'page1'];
+
+let multipleHtmlPlugins = htmlPageNames.map(name => {
+    return new HtmlWebpackPlugin({
+        template: `./src/${name}.html`, // relative path to the HTML files
+        filename: `${name}.html`, // output HTML files
+        chunks: [`${name}`] // respective JS files
+    })
+});
+
 const config = {
     entry: "./src/index.js",
     output: {
@@ -18,22 +28,41 @@ const config = {
         open: true,
         host: "localhost",
     },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: "./src/index.html",
-            scriptLoading: "blocking",
-            inject: "head",
-        }),
 
+    plugins: [].concat(
         new MiniCssExtractPlugin(),
-
         new CopyPlugin({
             patterns: [{ from: "./src/assets", to: "assets" }],
             options: {
                 concurrency: 100,
             },
         }),
-    ],
+        htmlPageNames.map(
+            (page) =>
+                new HtmlWebpackPlugin({
+                    template: `./src/${page}.html`, // relative path to the HTML files
+                    filename: `${page}.html`, // output HTML files
+                    chunks: [`${page}`] // respective JS files
+                })
+        ),
+        // <- here goes array(s) of other plugins
+    ),
+
+
+/*    plugins: [
+        new HtmlWebpackPlugin({
+           template: "./src/index.html",
+            scriptLoading: "blocking",
+            inject: "head",
+        }),
+
+
+        new MiniCssExtractPlugin(),
+
+
+    ].concat(multipleHtmlPlugins),
+    */
+
     module: {
         rules: [
             {

@@ -62,3 +62,17 @@
   font-weight: 400;
   line-height: 25px; /* 166.667% */
 }
+
+.body-xs {
+  font-family: var(--main-font);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+
+@mixin color-img-line {
+  content: '';
+  width: 128px;
+  position: absolute;
+  background: linear-gradient(27deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
+}

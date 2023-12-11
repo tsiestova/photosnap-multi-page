@@ -8,6 +8,7 @@
 @import "./components/beautiful-stories.scss";
 @import "./components/gallery.scss";
 @import "./components/advantages.scss";
+@import "./components/footer.scss";
 
 
 body {
@@ -34,15 +35,18 @@ body {
       position: relative;
 
       &:after {
-        content: '';
-        width: 128px;
+        @include color-img-line;
         height: 6px;
         left: 33px;
         bottom: -6px;
-        position: absolute;
         bottom: 0;
-        background: linear-gradient(27deg, #FFC593 0%, #BC7198 43.29%, #5A77FF 83.33%);
       }
     }
+  }
+}
+
+.section-dark {
+  .text-wrap-box {
+    background: #000;
   }
 }
